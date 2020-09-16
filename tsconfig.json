@@ -1,0 +1,17 @@
+{
+    "compilerOptions": {
+      "module": "commonjs",
+      "target": "ES5",
+      "noImplicitAny": true,
+      "removeComments": true,
+      "preserveConstEnums": true,
+      "outDir": "./built",
+      "sourceMap": true,
+      "strictNullChecks": true,
+      "strict": true,
+      "esModuleInterop": true,
+      "declaration": true
+    },
+    "include": ["src/**/*", "tests/**/*"],
+    "exclude": ["node_modules", "**/*.spec.ts"]
+}
