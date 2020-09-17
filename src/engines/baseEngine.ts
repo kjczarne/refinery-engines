@@ -1,10 +1,10 @@
-import { RefineryDatabaseWrapper } from 'refinery-core';
+import { RefineryDatabaseWrapper } from '../database';
 import { Record } from 'refinery-core';
 import { config, DEFAULT_CONFIG_PATH } from 'refinery-core';
 import { IRecord } from 'refinery-core';
 import { logger } from 'refinery-core';
-import { create, map } from 'lodash';
 import dedent from 'ts-dedent';
+
 
 export type ExportCallbackType = (output: string, recs: Array<IRecord>, flipped: boolean)=>Array<string>;
 
@@ -173,7 +173,7 @@ export class BaseEngine {
       },
     }
     try {
-      let flashcardsResponse = await this.recordsDb.db.find(flashcardsQuery);
+      let flashcardsResponse = await this.recordsDb.find(flashcardsQuery);
       let flashcards: Array<IRecord> | undefined = <Array<IRecord>><unknown>flashcardsResponse.docs;
       if (diffFilter !== undefined) {
         var filteredFlds: Array<IRecord> = flashcards.filter((record)=>{

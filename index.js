@@ -10,4 +10,6 @@ var json_1 = require("./built/engines/json");
 Object.defineProperty(exports, "JsonEngine", { enumerable: true, get: function () { return json_1.JsonEngine; } });
 var andevFlashcards_1 = require("./built/engines/andevFlashcards");
 Object.defineProperty(exports, "AndevFldsEngine", { enumerable: true, get: function () { return andevFlashcards_1.AndevFldsEngine; } });
+var database_1 = require("./built/database");
+Object.defineProperty(exports, "RefineryDatabaseWrapper", { enumerable: true, get: function () { return database_1.RefineryDatabaseWrapper; } });
 //# sourceMappingURL=index.js.map
